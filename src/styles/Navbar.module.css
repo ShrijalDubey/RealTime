@@ -1,0 +1,65 @@
+.maincont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    text-align: center;
+    background-color: #0B0B0B;
+    color: white;
+    height: 5rem;
+    border-bottom: 1px solid rgb(67, 67, 67);
+}
+.leftnav {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.navbtn{
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  height: 2.5rem;
+    background-color: #0B0B0B;
+    border-radius: 5rem;
+    padding: 0rem 0.5rem;
+    font-size: 1rem;
+    border-right: none;
+    transform: translateX(10px);
+    align-items: center;
+
+}
+.rightnav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.navinput{
+    height: 2.5rem;
+    width: 18rem;
+    background-color: #0B0B0B;
+    border: none;
+    border-radius: 5rem;
+    padding: 0rem 1rem;
+    font-size: 1rem;
+    color: white;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    border: 1px solid rgb(67, 67, 67);
+}
+.navinput:focus{
+    outline: none;
+}
+.modebtn{
+    height: 2.5rem;
+    background-color: #0B0B0B;
+    border: none;
+
+    padding: 0rem 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
