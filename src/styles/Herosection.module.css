@@ -1,68 +1,188 @@
-.maincont{
-    display: flex;
-    flex-direction: column;
-    justify-content: first baseline;
-    align-items: left;
-    background-color: #0B0B0B;
-    color: white;
-    text-align: bottom;
-    padding: 0 4rem;
+.maincont {
+  display: flex;
+  flex-direction: column;
+  background-color: #0B0B0B;
+  color: white;
+  padding: 0 4rem;
 }
-.heroimg{
-    background-image: url(https://drop.ndtv.com/video/images/vod/medium/2025-05/935907_maxresdefault.jpg);
-    width: 100%;
-    overflow: hidden;
-    min-height: 50rem;
-    border-radius: 2rem;
-    margin-top: 2rem;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;  
-    margin-bottom: 3rem;  
+
+
+
+.heroimg {
+  position: relative;
+  width: 100%;
+  min-height: 50rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  overflow: hidden;
+  transition: background-size 0.5s ease-in-out;
 }
-.textdiv{
-    position: absolute;
-    bottom: 20%;
-    left: 5%;
-    color: white;
+
+.heroimg:hover {
+  background-size: 102%;
 }
-.features{
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    padding: 0.2rem 1rem;
-    background: linear-gradient(90deg, #ff6b00 0%, #ff9e00 100%);
-    border-radius: 1rem;
+
+
+.heroimg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85) 10%,
+    rgba(0,0,0,0.45) 40%,
+    rgba(0,0,0,0.1) 100%
+  );
 }
-.featured{
-    font-size: 1rem;
-    display: flex;
-    gap: 1rem;
-    font-weight: 700;
+
+.textdiv {
+  position: absolute;
+  bottom: 8%;
+  left: 2%;
+  max-width: 90%;
+  z-index: 2;
 }
-.herotitle{
-    font-size: 2rem;
-    font-weight: 800;   
-    max-width: 60%;
-    width: auto;
+
+.featured {
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  flex-wrap: wrap;
 }
-.herotext{
-    font-size: 1rem;
-    font-weight: 500;
-    max-width: 50%;
-    margin-top: 1rem;
-    margin-bottom: 1.4rem;
-    color: rgb(189, 189, 189);
+
+.features {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  background: linear-gradient(90deg, #ff6b00 0%, #ff9e00 100%);
+  border-radius: 1rem;
 }
+
+.herotitle {
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  max-width: 60%;
+}
+
+.herotext {
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: rgb(189, 189, 189);
+}
+
+
 .herobtn {
-    cursor: pointer;
-    font-size: 1rem;
-    background: linear-gradient(90deg, #ff6b00 0%, #ff9e00 100%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #ff6b00 0%, #ff9e00 100%);
   color: white;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+  padding: 0.75rem 1.6rem;
   border-radius: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.herobtn:hover {
+  scale: 1.05;
+  gap: 1rem;
+}
+
+
+@media (max-width: 1024px) {
+  .herotitle {
+    max-width: 75%;
+    font-size: 2rem;
+  }
+
+  .herotext {
+    max-width: 65%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .maincont {
+    padding: 0 1rem;
+  }
+
+  .heroimg {
+    min-height: 30rem;
+    border-radius: 1.5rem;
+  }
+
+  .textdiv {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .herotitle {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+
+  .herotext {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .features {
+    font-size: 0.60rem;
+    padding: 0.25rem 0.8rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .heroimg {
+    min-height: 22rem;
+  }
+
+  .textdiv {
+    padding: 1rem;
+  }
+
+  .featured {
+    gap: 0.5rem;
+  }
+
+  .features {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .herotitle {
+    font-size: 0.9rem;
+    line-height: 1.35;
+    margin-top: 0.5rem;
+  }
+
+  .herotext {
+    font-size: 0.6rem;
+    line-height: 1.4;
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+    color: #d0d0d0;
+  }
+
+  .herobtn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.1rem;
+  }
 }

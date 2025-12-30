@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx'
 import Herosection from './components/Herosection.jsx'
 import Selector from './components/Selector.jsx'
 import Footer from './components/Footer.jsx'
+import Cards from './components/Cards.jsx'
 
 export default function App() {
   return (
@@ -10,7 +11,9 @@ export default function App() {
       <Navbar />
       <Herosection />
       <Selector />
+      <Cards/>
       <Footer/>
+      
     </>
   )
 }

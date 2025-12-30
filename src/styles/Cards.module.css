@@ -1,0 +1,162 @@
+.maincont {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  gap: 1.5rem;
+  padding: 0 4rem;
+  background-color: #0b0b0b;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #121417;
+  border-radius: 1.5rem;
+  width: 36rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  color: #ff6b00;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+
+}
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+.cardContent {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.cardDescription {
+  font-size: 0.9rem;
+  color: #b5b5b5;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.source {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cardImage {
+  transition: all 0.5s ease-in-out;
+}
+
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.readMore {
+  background: none;
+  border: none;
+  color: #ff6b00;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+   opacity: 0;     
+     transition: all 0.3s ease;
+}
+.card:hover .readMore {
+  opacity: 1;       
+  transform: translateY(0); 
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+.loadMoreContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.loadMoreBtn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.loadMoreBtn:hover {
+    scale: 1.05;
+  gap: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .maincont {
+    padding: 0 1.5rem;
+    gap: 1.8rem;
+  }
+
+  .imageWrapper {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maincont {
+    padding: 0 1rem;
+  }
+
+  .cardTitle {
+    font-size: 0.95rem;
+  }
+
+  .cardDescription {
+    font-size: 0.85rem;
+  }
+}
